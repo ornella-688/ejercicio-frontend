@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'suecaslab-bold';
+  src: url('./fonts/suecaslab-bold.eot') format('embedded-opentype'), url('./fonts/suecaslab-bold.svg') format('svg'), url('./fonts/suecaslab-bold.ttf') format('ttf'), url('./fonts/suecaslab-bold.woff') format('woff'), url('./fonts/suecaslab-bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'suecaslab-medium';
+  src: url('./fonts/suecaslab-medium.eot') format('embedded-opentype'), url('./fonts/suecaslab-medium.svg') format('svg'), url('./fonts/suecaslab-medium.ttf') format('ttf'), url('./fonts/suecaslab-medium.woff') format('woff'), url('./fonts/suecaslab-medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .col-md {
+    flex: 0 0 100%;
+
+    @media(min-width: 768px) {
+      flex: 0 0 66.66667%;
+    }
+  }
+
+  .col-sm {
+    flex: 0 0 100%;
+
+    @media(min-width: 768px) {
+      flex: 0 0 33.3333%;
+    }
+  }
+}
+
+.row-grid {
+  display: grid;
+  grid-column-gap: 4%;
+  grid-template-columns: 1fr;
+
+  @media(min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media(min-width: 1366px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+}
